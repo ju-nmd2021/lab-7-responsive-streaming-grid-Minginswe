@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* the style of header */
+header {
+    height: 2.125em;
+    /* background-color: pink; */
+    box-shadow: 0px 1px 5px black;
+}
+
+.website-title {
+    float: left;
+    margin: 0 0 0 2em;
+    font-size: medium;
+    line-height: 2.125em;
+}
+
+.option-list {
+    display: flex;
+    float: left;
+    margin-left: 5%;
+}
+
+.option-list li {
+    margin-left: 2em;
+    line-height: 2.125em;
+}
+
+header .search-frame {
+    float: right;
+    margin-right: 10%;
+    width: 20%;
+}
+
+.search-frame input {
+    float: right;
+    width: 50%;
+    outline-style: none;
+    height: 2.125em;
+    margin-top: 3px;
+    border: 1px solid black;
+    border-right: 0px;
+}
+
+.search-frame button {
+    float: right;
+    height: 2.125em;
+    margin-top: 3px;
+    border: 1px solid black;
+    border-left: 0;
+    background-color: transparent;
+}
+/*--- header ends  ---*/
+        /* the button with a little roatation */
+        .btn:hover {
+            width: 80px;
+            height: 20px;
+            border-radius: 30px;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation-name: btn-ani;
+            animation-duration: 2s;
+            animation-timing-function: cubic-bezier(0.785, 0.135, 0.15, 0.86);
+
+        }
+
+        .btn {
+            width: 80px;
+            height: 20px;
+            margin: 10% auto;
+            border-radius: 30px;
+            border: 2px solid black;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* rotate animation */
+        @keyframes btn-ani {
+            10% {
+                transform: rotate(-10deg);
+            }
+
+            50% {
+
+                transform: rotate(10deg);
+            }
+
+            60% {
+
+                transform: rotate(-10deg);
+            }
+
+            70% {
+                transform: rotate(0deg);
+            }
+        }
+
+/* main starts  */
+/* the grid  */
+.series {
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: 1fr 0.3fr repeat(4, 1fr);
+    grid-column-gap: 1px;
+    grid-row-gap: 0px;
+}
+ .slogan {
+     grid-area: 2/2/3/7;
+     border-top: 1px solid grey;
+     margin: 5% auto;
+ }
+ .slogan h1 {
+     margin: 0 auto;
+ }
+ .series .name {
+   width: 100%;
+   text-align: center;
+ }
+.box1 {
+    grid-area: 1/2/2/3;
+}
+
+.box2 {
+    grid-area: 1/3/2/4;
+}
+
+.box3 {
+    grid-area: 1/4/2/5;
+}
+
+.box4 {
+    grid-area: 1/5/2/6;
+}
+
+.box5 {
+    grid-area: 1/6/2/7;
+}
+
+.box6 {
+    grid-area: 3/2/4/3;
+}
+
+.box7 {
+    grid-area: 3/3/4/4;
+}
+
+.box8 {
+    grid-area: 3/4/4/5;
+}
+
+.box9 {
+    grid-area: 3/5/4/6;
+}
+
+.box10 {
+    grid-area: 3/6/4/7;
+}
+.box11 {
+    grid-area: 4/2/5/3;
+}
+.box12 {
+    grid-area: 4/3/5/4;
+}
+.box13 {
+    grid-area: 4/4/5/5;
+}
+.box14 {
+    grid-area: 4/5/5/6;
+}
+.box15 {
+    grid-area: 4/6/5/7;
+}
+.box16 {
+    grid-area: 5/2/6/3;
+}
+.box17 {
+    grid-area: 5/3/6/4;
+}
+.box18 {
+    grid-area: 5/4/6/5;
+}
+.box19 {
+    grid-area: 5/5/6/6;
+}
+.box20 {
+    grid-area: 5/6/6/7;
+}
+.series img {
+    width: 100%;
+}
+.movies {
+    width: 90%;
+}
+.series .name {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 12%;
+    font-weight: 700;
+}
+/* footer starts  */
+footer {
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    box-shadow: 10px 7px 25px black;
+}
+footer .more-info {
+    float: left;
+    height: 100%;
+    color: #fff;
+    margin-left: 10%;
+    margin-top: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.more-info li {
+    margin-top: 1.25em;
+}
+.more-info li a {
+    color: black;
+}
+/* footer ends-------  */
+/* responsive */
+@media (max-width:930px) {
+    .series img {
+        width: 90%;
+    }
+    .movise {
+        width: 80%;
+    }
+}
+@media (max-width:780px) {
+    .option-list, .btn {
+        display: none;
+    }
+    .box1, .box5,
+    .box6, .box10,
+    .box11, .box15,
+    .box16, .box20 {
+        display: none;
+    }
+    .responsive-survial img{
+        width: 100%;
+    }
+}

@@ -1,0 +1,160 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    list-style: none;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/* the style of header */
+header {
+    height: 2.125em;
+    /* background-color: pink; */
+    box-shadow: 0px 1px 5px black;
+}
+
+.website-title {
+    float: left;
+    margin: 0 0 0 2em;
+    font-size: medium;
+    line-height: 2.125em;
+}
+
+.option-list {
+    display: flex;
+    float: left;
+    margin-left: 5%;
+}
+
+.option-list li {
+    margin-left: 2em;
+    line-height: 2.125em;
+}
+
+header .search-frame {
+    float: right;
+    margin-right: 10%;
+    width: 20%;
+}
+
+.search-frame input {
+    float: right;
+    width: 50%;
+    outline-style: none;
+    height: 2.125em;
+    margin-top: 3px;
+    border: 1px solid black;
+    border-right: 0px;
+}
+
+.search-frame button {
+    float: right;
+    height: 2.125em;
+    margin-top: 3px;
+    border: 1px solid black;
+    border-left: 0;
+    background-color: transparent;
+}
+/*--- header ends  ---*/
+
+/* the main starts---  */
+ .container {
+     display: flex;
+ }
+ .poster {
+     width: 40%;
+     margin: 5% 0 0 5%;
+     box-shadow: 1px ;
+ }
+ .poster img {
+     width: 100%;
+ }
+ .container .detail {
+     margin: 5% 0 0 8%;
+ }
+ .introduction p {
+     margin-top: 2em;
+ }
+ /* the grids */
+ .list {
+    margin: 2em auto 0;
+    width: 80px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(5, 1fr);
+    grid-column-gap: 2px;
+    grid-row-gap: 2px;
+    }
+/* .box1 {grid-area: 1/1/2/2;}
+.box2 {grid-area: 1/2/2/3;}
+.box3 {grid-area: 1/3/2/4;}
+.box4 {grid-area: 1/4/2/5;} */
+.list p {
+    grid-area: 1/1/2/5;
+    font-family: Impact, 'Arial Narrow Bold', sans-serif;
+}
+.episode {
+    width: 20px;
+    height: 20px;
+    border: 1px solid grey;
+    background-color: white;
+}
+.episode:hover {
+    outline-width: thin;
+    outline-style: solid;
+    outline-color: black;
+}
+/* footer starts  */
+footer {
+    margin-top: 10%;
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    box-shadow: 10px 7px 25px black;
+}
+footer .more-info {
+    float: left;
+    height: 100%;
+    margin-left: 10%;
+    margin-top: 2em;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+.more-info li {
+    margin-top: 1.25em;
+}
+.more-info li a {
+    color: black;
+}
+/* footer ends-------  */
+
+/* responsive */
+@media (max-width:930px) {
+    .detail {
+        max-width: 30%;
+    }
+    .detail h2{
+    font-size: 20px;
+    }
+    .detail p {
+        font-size: 14px;
+    }
+}
+@media (max-width:780px) {
+    .detail .plot,.option-list {
+        display: none;
+    }
+    .container {
+        width: 100%;
+        display: block;
+        margin: 10% 25%;
+    }
+    .list {
+        margin: 20% auto;
+    }
+}
